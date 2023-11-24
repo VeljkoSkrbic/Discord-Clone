@@ -1,0 +1,35 @@
+version: '3'
+services:
+  frontend_app:
+    container_name: discord-frontend-app
+    build: ./discord-clone-frontend
+    volumes:
+      - ./discord-clone-frontend:/usr/src/app
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - discord_db
+
+  message_api:
+    container_name: message_api
+    build: ./discord-clone-backend/messages
+    volumes:
+      - ./discord-clone-backend/messages:/usr/src/app
+    ports:
+      - "5000:5000"
+    restart: always
+    depends_on:
+      - discord_db
+
+
+  discord_db:
+    container_name: discord_db
+    image: mysql
+    restart: always
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: discord
+      MYSQL_DATABASE: discord
+    command: --pid-file=/var/lib/mysql/mysql.pid

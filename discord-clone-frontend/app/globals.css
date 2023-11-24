@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #313338;
+}
+@layer components {
+  .sidebar-icon {
+    @apply flex-col items-center justify-center 
+    h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+    cursor-pointer;
+}
+}

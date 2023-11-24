@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "discord",
+    "database": "discord",
+    "host": "discord_db",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "discord",
+    "database": "database_test",
+    "host": "discord_db",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "discord",
+    "database": "discord",
+    "host": "discord_db",
+    "dialect": "mysql"
+  }
+}

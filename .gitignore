@@ -139,7 +139,7 @@ dist
 # Optional stylelint cache
 
 # SvelteKit build / generate output
-.svelte-kit
+.svelte-kit 
 
 ### react ###
 .DS_*
@@ -149,6 +149,7 @@ dist
 node_modules
 
 *.sublime*
+data
 
 psd
 thumb
